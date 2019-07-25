@@ -1,0 +1,82 @@
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;/*para que tenga los pixeles de ancho */
+}
+
+body{
+	font-family: 'Montserrat', san-serif;
+}
+
+/*Accedo al video, ya que quiero posicionar la informacion del evento en el centro */
+.embed-responsive{
+	position: relative;
+	background-image: url(../img/fondo2.png);
+	height: 50rem;
+	/* background-repeat:no-repeat;*/
+	background-position: center center; 
+}
+
+@media(min-width:992px){
+	.embed-responsive{
+	background-image: unset; /*para remover la imagen */
+	height: auto;/*para reiniciarlo */
+	}/*embed-responsive */
+}
+
+.embed-responsive::after{
+	content:'';
+	display: block;
+	position: absolute;
+	top:0;
+	height: 100%;
+	width: 100%;
+	/* agrego el gradiant */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,000000+51,6b6b6b+100&0.7+0,0.7+100 */
+    background: -moz-linear-gradient(-45deg, rgba(169,3,41,0.7) 0%, rgba(0,0,0,0.7) 51%, rgba(107,107,107,0.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(169,3,41,0.7) 0%,rgba(0,0,0,0.7) 51%,rgba(107,107,107,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(169,3,41,0.7) 0%,rgba(0,0,0,0.7) 51%,rgba(107,107,107,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3a90329', endColorstr='#b36b6b6b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.informacion-shuffle{
+	position: absolute;
+	top: 20%;
+	z-index:100;/*para traerlo al frente */
+}
+
+@media(min-width:992px){
+	.informacion-shuffle{
+		top:35%;
+	}/*informacion shuffle*/
+}
+
+.informacion-shuffle h1{
+	font-size: 3rem;
+	line-height: 6rem;
+}
+
+@media(min-width:992px){
+	.informacion-shuffle h1{
+		font-size: 4rem;
+		line-height: unset;
+	}/*informacion shuffle*/
+}
+
+.informacion-shuffle h1 span,
+.informacion-shuffle p{
+	font-weight: 700; /*el grosor*/
+	-webkit-box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
+    box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
+
+}
+
+.informacion-shuffle p{
+	font-size: 2rem;
+}
+
+.informacion-shuffle .text-dark{
+	color:#FF2245!important;
+	font-weight: 700;
+}
