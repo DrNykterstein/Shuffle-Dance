@@ -11,10 +11,9 @@ body{
 /*Accedo al video, ya que quiero posicionar la informacion del evento en el centro */
 .embed-responsive{
 	position: relative;
-	background-image: url(../img/fondo2.png);
+	background-image: url(../img/fondoresponsive.jpg);
 	height: 50rem;
-	/* background-repeat:no-repeat;*/
-	background-position: center center; 
+	background-position: right right; 
 }
 
 @media(min-width:992px){
