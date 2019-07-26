@@ -8,6 +8,58 @@ body{
 	font-family: 'Montserrat', san-serif;
 }
 
+/* ------ Escenarios ---- */
+.bg-danger{
+	background-color:#81004b!important;
+	/*background-color:#F53756!important; */
+	background: -moz-linear-gradient(-45deg, rgba(169,3,41,0.7) 0%, rgba(0,0,0,0.7) 51%, rgba(107,107,107,0.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(169,3,41,0.7) 0%,rgba(0,0,0,0.7) 51%,rgba(107,107,107,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(169,3,41,0.7) 0%,rgba(0,0,0,0.7) 51%,rgba(107,107,107,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3a90329', endColorstr='#b36b6b6b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.bg-success{
+	background-color: #4cb8b3!important;
+}
+
+.bg-warning{
+	background-color:#fef46d!important;
+}
+
+.bg-secondary{
+	background-color:#752f97!important; 
+}
+
+.separador::after{
+	content: '';
+	display: block;
+	height: 120px;
+	width: 300px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:120px;
+	margin: 0 auto; 
+}
+
+.musica::after{
+	background-image:url(../img/guitarra.png); 
+}
+
+.baile::after{
+	background-image:url(../img/dj.png); 	
+
+}
+
+.horario.bg-warning li:nth-child(2n+1){
+	background-color:#4cb8b3!important;
+
+}
+
+.horario.bg-success li:nth-child(2n+1){
+	background-color:#eae05b!important;
+
+}
+
 /*Accedo al video, ya que quiero posicionar la informacion del evento en el centro */
 .embed-responsive{
 	position: relative;
@@ -81,3 +133,4 @@ body{
 	color:#FF2245!important;
 	font-weight: 700;
 }
+
