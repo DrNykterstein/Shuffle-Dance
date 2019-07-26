@@ -65,6 +65,7 @@ body{
 .informacion-shuffle h1 span,
 .informacion-shuffle p{
 	font-weight: 700; /*el grosor*/
+	/* sombras */
 	-webkit-box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
     -moz-box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
     box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
@@ -75,7 +76,8 @@ body{
 	font-size: 2rem;
 }
 
-.informacion-shuffle .text-dark{
+.informacion-shuffle .text-dark,
+.sobre-shuffle .text-dark{
 	color:#FF2245!important;
 	font-weight: 700;
 }
