@@ -7,7 +7,6 @@
 body{
 	font-family: 'Montserrat', san-serif;
 }
-
 /* ------ Escenarios ---- */
 .bg-danger{
 	background-color:#81004b!important;
@@ -19,7 +18,8 @@ body{
 }
 
 .bg-success{
-	background-color: #4cb8b3!important;
+	background-color:#4cb8b3!important;
+
 }
 
 .bg-warning{
@@ -29,7 +29,34 @@ body{
 .bg-secondary{
 	background-color:#752f97!important; 
 }
+/* Navbar*/
+.fixed-top{
+	transition: all .3s ease; /*Transicion */
+}
+.fixed-top.bg-success{
+	-webkit-box-shadow: 0px 5px 19px -5px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 5px 19px -5px rgba(0,0,0,0.44);
+    box-shadow: 0px 5px 19px -5px rgba(0,0,0,0.44);
+}
 
+.navbar-brand{
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.navbar-brand span{
+	font-weight: 700;
+}
+
+.fixed-top .nav-link{
+	color: white!important;
+}
+
+.fixed-top .active{
+	background-color: #752f97!important;
+}
+
+/*Escenearios*/
 .separador::after{
 	content: '';
 	display: block;
@@ -132,5 +159,101 @@ body{
 .sobre-shuffle .text-dark{
 	color:#FF2245!important;
 	font-weight: 700;
+}
+/** --- Dias faltantes  --- */
+.fecha{
+	font-size: 2rem;
+}
+
+.fecha span{
+	font-weight: 700;
+}
+
+.fecha span::before{
+	content: '-';
+}
+/*Para quitarle al principio '-' */
+.fecha span:first-child:before{
+	display: none;
+}
+
+/* --- Entradas --- */
+.entradas .precio{
+	font-size: 2rem;
+}
+
+.entradas .active{
+	background-color: #752f97!important;
+	border-color:#752f97!important;
+}
+
+.list-group-item-success{
+	background-color: #4cb8b3!important;
+}
+
+/*------- Formulario -----------*/
+.formulario{
+	background: #fff;
+	width: 600px;
+	margin: 10px auto; /*para centrarlo */
+	padding: 50px;
+	border-radius: 11px;
+}
+
+
+/*Para que sea responsive, utilizo en mediaquery */
+@media(max-width:992px){
+	.formulario{
+	width: 400px;
+	}/*formulario */
+}
+
+.formulario input{
+	display: block;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea,
+.formulario .form-group{
+	width: 100%;
+	padding: 10px;
+	margin-bottom:20px ;/*margen inferior, para separarlos uno del otro */
+	border-radius: 5px; 
+	border: 1px solid #226fc1;
+	font-size: 18px;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario textarea:focus,
+.formulario .form-group{
+	border: 2px solid #752f97;
+
+}
+
+/* --- Para regular el agrandamiento del textarea */
+.formulario textarea{
+	min-height: 80px;
+	max-height: 200px;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+/*Estilos al boton */
+.formulario input[type="submit"]{
+	margin:0 auto;/*para centrar el boton */
+	background: none;
+	border: 1px solid #752f97;
+	color: #752f97;
+	padding: 10px;
+	cursor: pointer;/*Para cambiar el cursor */
+	font-size: 17px;
+	border-radius: 5px;
+}
+
+.formulario input[type="submit"]:hover{
+	background: #752f97;
+	color: #4cb8b3!important;
 }
 

@@ -8,7 +8,25 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navegacion">
+	<!--Barra de navegacion -->
+	<nav id="navegacion" class="navbar fixed-top navbar-light bg-transparent">
+		<div class="container">
+			<a href="#" class="navbar-brand text-light">ShuffleDance<span>2019</span></a>
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a href="#shufflers" class="nav-link">LineUp</a>
+				</li>
+				<li class="nav-item">
+					<a href="#entradas" class="nav-link">Entradas</a>
+				</li>
+				<li class="nav-item">
+					<a href="#registro" class="nav-link">Registrate</a>
+				</li>
+			</ul><!--nav -->
+		</div><!--container -->
+	</nav><!-- Navegacion -->
+
 	<div class="embed-responsive embed-responsive-16by9">
 		<!--cargo el video -->
 		<video class="embed-responsive-item d-none d-lg-block" src="video/concierto.mp4" autoplay loop></video>
@@ -49,7 +67,7 @@
 
 
 	<!-- Shufflers confirmados -->
-	<div class="shufflers mb-5 p-5 bg-danger"><!--Margen abajo de 5 y padding de 5 + color fondo-->
+	<div id="shufflers" class="shufflers mb-5 p-5 bg-danger"><!--Margen abajo de 5 y padding de 5 + color fondo-->
 		<h2 class="text-center text-light">Shufflers</h2>
 		<h3 class="text-center text-uppercase text-light mt-4">Viernes 30</h3><!--Margintop de 4-->
 
@@ -101,7 +119,7 @@
 
 								<li class="p-3">
 									<p class="font-weight-bold m-0">6:00
-										<span class="font-weight-normal">|Desmostración de Shuffle avanzando</span>
+										<span class="font-weight-normal">|Desmostración</span>
 									</p>
 								</li>
 
@@ -121,15 +139,180 @@
 
 					</div><!-- Horario -->
 				</div><!--col-md6--- escenario 2 -->
-
 			</div><!--Row -->
 		</div><!--Container -->
 
-		
+		<!-- ****** Sabado 31 ****** -->
+		<h3 class="text-center text-uppercase text-light mt-4">Sábado 31</h3><!--Margintop de 4-->
+		<!-- Procedemos a usar la Grid  -->
+		<div class="container mt-4">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="horario bg-success pt-2"><!--Padding top 4-->
+						<h4 class="text-dark mt-4 text-center separador musica">Escenario 1</h4>
+							<ul class="list-unstyled mt-5 pt-1">
+								<li class="p-3">
+									<p class="font-weight-bold m-0">4:00
+										<span class="font-weight-normal">|Infection</span>
+									</p>
+								</li>
+
+								<li class="p-3">
+									<p class="font-weight-bold m-0">6:00
+										<span class="font-weight-normal">|Eclipse</span>
+									</p>
+								</li>
+
+								<li class="p-3">
+									<p class="font-weight-bold m-0">8:00
+										<span class="font-weight-normal">|Sobus</span>
+									</p>
+								</li>
+
+								<li class="p-3">
+									<p class="font-weight-bold m-0">9:00
+										<span class="font-weight-normal">|Seven</span>
+									</p>
+								</li>
+							</ul>
+
+
+					</div><!-- Horario -->
+				</div><!--col-md6-->
+				<!--Escenario 2 -->
+				<div class="col-md-6">
+					<div class="horario bg-warning pt-2"><!--Padding top 4-->
+						<h4 class="text-dark mt-4 text-center separador baile">Escenario 2</h4>
+							<ul class="list-unstyled mt-5 pt-1">
+								<li class="p-3">
+									<p class="font-weight-bold m-0">4:00
+										<span class="font-weight-normal">|Shuffle Intermedio</span>
+									</p>
+								</li>
+
+								<li class="p-3">
+									<p class="font-weight-bold m-0">6:00
+										<span class="font-weight-normal">|Desmostración</span>
+									</p>
+								</li>
+
+								<li class="p-3">
+									<p class="font-weight-bold m-0">8:00
+										<span class="font-weight-normal">|Coreagrafia</span>
+									</p>
+								</li>
+
+								<li class="p-3">
+									<p class="font-weight-bold m-0">9:00
+										<span class="font-weight-normal">|Baile grupal</span>
+									</p>
+								</li>
+							</ul>
+
+
+					</div><!-- Horario -->
+				</div><!--col-md6--- escenario 2 -->
+			</div><!--Row -->
+		</div><!--Container -->
 	</div><!--Shufflers -->
 
+	<!-- Ven a bailar Shuffle -->
+
+	<div class="contenido-principal my-5"><!--Margin top de 5, separacion -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="img/13.jpg" class="img-fluid"><!--Img-fluid para que sea responsive -->
+				</div><!--col-->
+				
+				<!--2da parte -->
+				<div class="col-md-6 align-items-center d-flex sobre-shuffle"><!-- Para centrarlo -->
+					<div class="contenido">
+						<h2>Ven a bailar <span class="text-dark">Shuffle Dance</span>
+						</h2>
+						<p class="text-dark">¡Atrevete!</p>
+						<p>En esta oportunidad puedes aprender los pasos básicos, intermedios y avanzados. Ademas de vivir una experiencia completamente diferente.</p>
+					</div><!--contenido -->
+				</div><!--col-md-6 2da parte -->
+			</div><!--row-->
+		</div><!--container -->
+	</div><!--Main -->
 
 
+	<!-- dias faltante -->
+	<div class="dias-faltantes bg-success py-3">
+		<h2 class="text-center text-light display-1 text-uppercase font-weight-bold">Faltan</h2>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div id="fecha" class="text-light text-center fecha">	
+				</div><!-- fecha -->
+			</div><!-- row -->
+		</div><!-- Container -->
+	</div><!-- dias faltantes -->
 
+	<!-- Entradas -->
+	<div id="entradas" class="entradas bg-danger py-5">
+		<h2 class="text-center text-light mb-4">Entrada</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3 class="text-center text-light">1 Día</h3>
+					<div class="contenido mt-5">
+						<ul class="list-group text-center">
+							<li class="list-group-item active text-uppercase">Incluye</li><!-- Active, le
+							da color de fondo -->
+							<li class="list-group-item">Acceso Viernes</li>
+							<li class="list-group-item">Acceso a todos los escenarios</li>
+							<li class="list-group-item list-group-item-success text-light">
+								<p class="precio m-0">30mil BSS</p><!--Margin de 0 -->
+							</li>
+						</ul><!--List-group -->
+					</div><!-- contenido-bg-success mt-5 -->
+				</div><!--col-md-6-->
+
+				<div class="col-md-6">
+					<h3 class="text-center text-light">2 Días</h3>
+					<div class="contenido mt-5">
+						<ul class="list-group text-center">
+							<li class="list-group-item active text-uppercase">Incluye</li><!-- Active, le
+							da color de fondo -->
+							<li class="list-group-item">Acceso Viernes y Sábado</li>
+							<li class="list-group-item">Acceso a todos los escenarios</li>
+							<li class="list-group-item list-group-item-success text-light">
+								<p class="precio m-0">45mil BSS</p><!--Margin de 0 -->
+							</li>
+						</ul><!--List-group -->
+					</div><!-- contenido-bg-success mt-5 -->
+				</div><!--col-md-6-->
+			</div><!-- row -->
+			<p class="text-center mt-4 text-light">Podras disfrutar del área de comida, bebida y baños</p>
+		</div><!--container -->
+	</div><!--Entradas -->
+
+	<!-- Formulario de registro-->
+	<div class="bg-success py-5">
+		<h2 class="text-center text-light mb-3">Registrate</h2>
+		<div id="registro" class="container">
+			<form class="formulario" action="">
+				<input type="text" name="nombre" placeholder="Introduzca su nombre">
+				<input type="email" name="email" placeholder="Introduzca su correo">
+				<input type="email" name="cedula" placeholder="Introduzca su cedula">
+				<textarea placeholder="Mensaje"></textarea>
+				<select id="entrada" class="form-control">
+					<option>1 Día</option>
+					<option>2 Días</option>
+				</select><!--Fin del select -->
+				<br>
+				<input type="submit" name="enviar" placeholder="Enviar">
+			</form><!--Cierro la etiqueta form -->	
+		</div><!--Container -->
+	</div><!--formulario -->
+     
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>    
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/app.js"></script>
+	}
 </body>
 </html>
