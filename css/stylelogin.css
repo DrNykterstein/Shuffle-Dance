@@ -1,0 +1,25 @@
+/* Para centrarlo */
+html{
+	height: 100%;
+}
+
+body{
+	min-height: 100%;
+}
+
+body.login{
+	background: -moz-linear-gradient(-45deg, rgba(169,3,41,0.7) 0%, rgba(0,0,0,0.7) 51%, rgba(107,107,107,0.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(169,3,41,0.7) 0%,rgba(0,0,0,0.7) 51%,rgba(107,107,107,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(169,3,41,0.7) 0%,rgba(0,0,0,0.7) 51%,rgba(107,107,107,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3a90329', endColorstr='#b36b6b6b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.btn-primary,
+.bg-primary{
+	background-color:#81004b!important;
+	border-color:#81004b!important;
+}
+
+body.login .contenido{
+	border-radius: 10px;
+}
