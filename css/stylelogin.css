@@ -23,3 +23,15 @@ body.login{
 body.login .contenido{
 	border-radius: 10px;
 }
+
+.in-error{
+	border: #81004b solid 2px;
+}
+
+.all-fine{
+	border: #50f024 solid 2px;
+}
+
+.error-msg{
+	color:#81004b;
+}
