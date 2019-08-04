@@ -293,16 +293,29 @@
 	<div class="bg-success py-5">
 		<h2 class="text-center text-light mb-3">Registrate</h2>
 		<div id="registro" class="container">
-			<form class="formulario" action="">
+			<form class="formulario" action="" id="datosformulario">
 				<input type="text" name="nombre" placeholder="Introduzca su nombre">
 				<input type="email" name="email" placeholder="Introduzca su correo">
 				<input type="email" name="cedula" placeholder="Introduzca su cedula">
 				<textarea placeholder="Mensaje"></textarea>
-				<select id="entrada" class="form-control">
-					<option>1 Día</option>
-					<option>2 Días</option>
+				<label for="entrada">Seleccione su tipo de entrada</label>
+				<select id="entrada" class="form-control borde-dias">
+					<option value="1">1 Día</option>
+					<option value="2">2 Días</option>
 				</select><!--Fin del select -->
 				<br>
+				<label for="entradascantidad">Cantidad de Entradas</label>
+				<div class="form-group">
+                    <select class="form-control" id="entradas-cantidad">
+                                            
+                    </select>
+                </div><!-- Personas -->
+				<br>
+				<div id="resultado"></div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-raised btn-primary text-center">Total
+                             </button>
+                        </div><!-- boton de total -->
 				<input type="submit" name="enviar" placeholder="Enviar">
 			</form><!--Cierro la etiqueta form -->	
 		</div><!--Container -->
