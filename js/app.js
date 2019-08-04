@@ -38,6 +38,63 @@ function Total(entrada, entradascantidad){
 
 }
 
+Total.prototype.totalEntrada = function(){
+    /* 
+        Entrada de un 1 dia 30mil Bss
+        Entrada de 2 dias 40mil Bss
+    */
+    const unDia = 30000;
+    const dosDia = 40000;
+    switch(this.entrada.value){
+        case '1': 
+            precio = (unDia*this.entradascantidad.value);
+            break;
+        case '2':
+            precio = (dosDia*this.entradascantidad.value);
+            break;
+    }
+    return precio;
+}
+
+//Para mostrar el resultado
+function Interfaz(){}
+
+//Mensaje a imprimir en el html, en caso de error
+Interfaz.prototype.mostrarError = function(mensaje,tipo){
+    const div = document.createElement('div');
+    if(tipo == 'error'){//en caso de error
+        div.classList.add('mensaje','error');
+    }else{
+        div.classList.add('mensaje','correcto');
+    }
+    //inserto el html
+    div.innerHTML = `${mensaje}`;
+    formulario.insertBefore(div, document.querySelector('.form-group'));
+    setTimeout(function(){
+        document.querySelector('.mensaje').remove();
+    },3000);
+
+}
+
+//Mensaje a imprimir en el html, en caso correcto
+Interfaz.prototype.mostrarResultado = function(cotizarEntrada,precio){
+    const resultado = document.getElementById('resultado');
+    //creo un div
+    const div = document.createElement('div');
+    //inserto la informacion
+    div.innerHTML = `
+        <p>Los datos se han enviado correctamente </p>
+        <p>El total a pagar es ${precio} BSS </p>
+        <p>Te esperamos </p>
+    `;
+    const spinner = document.querySelector('#cargando img');
+    spinner.style.display = 'block';
+    setTimeout(function(){
+         spinner.style.display = 'none';
+         resultado.appendChild(div);
+    },3000);
+} 
+
 //EventListener
 const formulario = document.getElementById('datosformulario');
 formulario.addEventListener('submit',function(e){
@@ -50,18 +107,36 @@ formulario.addEventListener('submit',function(e){
     const entradasSeleccionada = entrada.options[entrada.selectedIndex].value;
 
     //leo la cantidad de entradas a comprar
-    const entradascantidad = document.getElementById('entradas-cantidad');
+    const entradascantidad = document.getElementById('entradascantidad');
     const entradascantidadSeleccionada = entradascantidad.options[entradascantidad.selectedIndex].value;
-    console.log(entradasSeleccionada);
-    console.log(entradascantidadSeleccionada);
-    console.log('Presionado');
+    
+    //creo la instancia
+    const interfaz = new Interfaz();
+
+    //compruebo que los campos no esten vacios
+    if(entradasSeleccionada == '' || entradascantidad == '' ){
+        interfaz.mostrarError('Faltan datos','error');//S hay error, se muestra
+    }else{
+        //Limpiar resultados anteriores
+        const resultado = document.querySelector('#resultado div');
+        if(resultado != null){
+            resultado.remove();
+        }
+
+        //En caso de que esten llenos correctamente, instancio el objeto interfaz
+        const cotizarEntrada = new Total(entrada,entradascantidad);
+        //cotizar la entrada
+        const precio = cotizarEntrada.totalEntrada();
+        //Muestro el resultado
+        interfaz.mostrarResultado(cotizarEntrada,precio);
+    }//else
 
 });
 
 //Opciones de cantidad de personas para comprar las entradas
 const max=10;//Maximo de cantidad de entradas que puede comprar
 const min=1;//Minimo de cantidad de entradas
-const selectEntradasCantidad = document.getElementById('entradas-cantidad');//Selecciono el ID
+const selectEntradasCantidad = document.getElementById('entradascantidad');//Selecciono el ID
 //Ciclo for para imprimir los opcions
 for(let i=min; i<=max;i++){
     let option = document.createElement('option');

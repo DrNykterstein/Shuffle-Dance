@@ -306,16 +306,18 @@
 				<br>
 				<label for="entradascantidad">Cantidad de Entradas</label>
 				<div class="form-group">
-                    <select class="form-control" id="entradas-cantidad">
+                    <select class="form-control" id="entradascantidad">
                                             
                     </select>
                 </div><!-- Personas -->
 				<br>
-				<div id="resultado"></div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-raised btn-primary text-center">Total
-                             </button>
-                        </div><!-- boton de total -->
+				<div id="cargando">
+                      <img src="img/spinner.gif">
+                </div>
+                <div class="form-group">
+                    <div id="resultado" class="text-center text-dark"></div>
+                </div><!-- boton de total -->
+
 				<input type="submit" name="enviar" placeholder="Enviar">
 			</form><!--Cierro la etiqueta form -->	
 		</div><!--Container -->
