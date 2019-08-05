@@ -1,0 +1,24 @@
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;/*para que tenga los pixeles de ancho */
+}
+
+body{
+	font-family: 'Montserrat', san-serif;
+}
+
+.bg-admin{
+	background-color:#81004b!important;
+
+}
+
+/* ------- Barra lateral -----*/
+aside{
+	width: 260px;
+	height: 100%;/* Altura del 100% */
+	position: fixed;
+	margin-top: 56px;
+	top: 0;
+	aside:1000;
+}

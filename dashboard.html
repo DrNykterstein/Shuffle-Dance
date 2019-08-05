@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/styledashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+	<!-- Barra principal -->
+	<nav class="navbar bd-navbar navbar-expand-lg navbar-dark bg-admin">
+		<a href="#" class="navbar-brand">Administración Shuffle</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+		 data-target="#navegacion">
+		 	<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navegacion">
+			<div class="container"><!--Procedo a usar la grid de boostrap -->
+				<div class="col"><!-- Columnas -->
+					<!--Barra de busqueda -->
+					<form action="#" class="my-2 my-lg-0">
+						<input class="form-control" type="search" placeholder="Buscar...">
+					</form><!-- Barra de busqueda -->
+				</div><!--col-->
+			</div><!--Container --> 	
+		</div><!--Collapse -->
+	</nav>
+	<!-- barra lateral -->
+	<aside class="bg-dark p-4">
+		<h3 class="text-light text-center">Navegación</h3>
+		<ul class="nav flex-column mt-5"><!--Para que sea lateral -->
+			<li class="nav-item">
+			<a href="#" class="nav-item text-light d-flex align-items-center"><!--align-items-center es 
+				para que este alineado con el icono -->
+				<!-- Agrego los iconos de materialize -->
+				<i class="material-icons mr-2">contacts</i>
+				Asitentes
+			</a>
+			</li>
+			<!--Entradas vendidas -->
+			<a href="#" class="nav-item text-light d-flex align-items-center mt-2"><!--align-items-center es 
+				para que este alineado con el icono -->
+				<!-- Agrego los iconos de materialize -->
+				<i class="material-icons mr-2">attach_money</i>
+				Ventas
+			</a>
+			</li>
+		</ul><!--UL-->
+	</aside><!-- aside -->
+
+</body>
+</html>
