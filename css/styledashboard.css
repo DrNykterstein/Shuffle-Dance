@@ -8,9 +8,21 @@ body{
 	font-family: 'Montserrat', san-serif;
 }
 
+.bg-success{
+	background-color: #7E004C!important;
+}
+
 .bg-admin{
 	background-color:#81004b!important;
 
+}
+
+/*Para que cuando hagamos scroll el contenido se pierda en la barra */
+.bd-navbar{
+	position: -webkit-sticky;
+	position: sticky;
+	top:0;
+	z-index: 1100;
 }
 
 /* ------- Barra lateral -----*/
@@ -21,4 +33,30 @@ aside{
 	margin-top: 56px;
 	top: 0;
 	aside:1000;
+}
+
+.nav-item a:hover{
+	text-decoration: none;
+	color: white!important;
+	background-color:#81004b!important;
+}
+/* Contenido principal */
+main{
+	margin-left: 260px;/* Para que no tome en cuenta el ancho del pisition fixed */
+	position: relative;
+	left: 0;
+	min-height: 100%;
+}
+
+.boton{
+	min-height: 100px;
+}
+
+.boton i{
+	font-size: 3rem;
+}
+
+.boton a:hover{
+	color: white!important;
+	text-decoration: none;
 }
