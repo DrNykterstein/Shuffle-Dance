@@ -3,11 +3,10 @@
 <head>
 	<title>Dashboard</title>
 	<meta charset="utf-8">
-	{% load static %}
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'core/css/styledashboard.css' %}">
+    <link rel="stylesheet" href="css/styledashboard.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -34,7 +33,7 @@
 		<h3 class="text-light text-center">Navegación</h3>
 		<ul class="nav flex-column mt-5"><!--Para que sea lateral -->
 			<li class="nav-item">
-			<a href="{%url 'dashboard' %}" class="nav-item text-light d-flex align-items-center"><!--align-items-center es 
+			<a href="dashboard.html" class="nav-item text-light d-flex align-items-center"><!--align-items-center es 
 				para que este alineado con el icono -->
 				<!-- Agrego los iconos de materialize -->
 				<i class="material-icons mr-2">contacts</i>
