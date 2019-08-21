@@ -10,21 +10,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$email = filter_var(strtolower($_POST['email']),FILTER_SANITIZE_STRING);
 	$password = $_POST['password'];
 
-	// valido errores 
-	$errores ='';
-	if(empty($email) or empty($password)){
-		$errores .='<li> Rellena los campos </li>';
-	}else{
-		try{
-			$conexion = new PDO('mysql:host=localhost;dbname=shuffle','root','');
-		}catch (PDOException $e){
-			echo "Error ". $e->getMessage();
-		}
 
-		$consulta=$conexion->prepare('SELECT * FROM usuarios WHERE = :email LIMIT 1');
-		$consulta->execute(array(':email'=>$email));
-		$resultado = $consulta->fetch();
-		print_r($resultado);
+	try{
+		$conexion = new PDO('mysql:host=localhost;dbname=shuffle','root','');
+	}catch (PDOException $e){
+			echo "Error ". $e->getMessage();
+	}
+
+	$statement = $conexion->prepare('SELECT *FROM usuarios where mail = :email AND 
+		password = :password');
+	$statement->execute(array(
+		':email' =>$email,
+		':password' => $password
+	 ));
+
+	$resultado = $statement->fetch();
+	if ($resultado !== false){
+		$_SESSION['email']=$email;
+		header('Location: dashboard.php');
+	}else{
+		$errores .= '<li>Error </i>';
 	}
 }
 
